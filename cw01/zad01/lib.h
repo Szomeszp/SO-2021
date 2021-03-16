@@ -30,13 +30,12 @@ typedef struct mainArray {
 } mainArray_t;
 
 
-mainArray_t *createMainTable(size_t size);
+mainArray_t *createMainTable(size_t size); //Done?
 
-void createRowsBlock(mainArray_t *mainArray, FILE *mergedFile);
-FILE *mergeFiles(char *firstFile, char *secondFile);
+void createRowsBlock(mainArray_t *mainArray, FILE *mergedFile); //Done?
+FILE *mergeFiles(char *firstFile, char *secondFile); //Done?
 
-int countRows(rowsBlock_t* block);
-int numberOfRows(mainArray_t* mainArray, size_t blockIndex);
+int numberOfRows(mainArray_t* mainArray, size_t blockIndex); //Done?
 
 void removeBlock(mainArray_t* mainArray, size_t blockindex);
 void removeRow(mainArray_t* mainArray, size_t blockIndex, size_t row);
