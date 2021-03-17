@@ -2,8 +2,6 @@
 
 #include "merge.h"
 
-
-
 mainArray_t *createMainArray(int size) {
     mainArray_t *mainArray = (mainArray_t*)calloc(1, sizeof(mainArray_t));
     mainArray->size = size;
@@ -106,12 +104,10 @@ int numberOfRows(mainArray_t* mainArray, int blockIndex){
         rowsBlock_t *block = mainArray->rowsBlocks[blockIndex];
 
         if(block){
-            //free(block);
             return block->size;
         }
         else{
             printf("Block is empty!\n");
-            //free(block);
             return -1;
         }
     }
@@ -149,7 +145,6 @@ void removeRow(mainArray_t* mainArray, int blockIndex, int row){
             printf("Block is empty!\n");
         }
 
-        //free(block);
     }
     else{
         printf("Block index out of range!\n");
