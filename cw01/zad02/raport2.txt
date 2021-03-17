@@ -1,0 +1,720 @@
+\n====================================\n
+------------STATIC TESTS------------\n
+====================================\n
+
+====================================
+Testing 16 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.000394 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.000098 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000007 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.001692 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.002496 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000408 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.025220 || User time: 0.010000 || System time: 0.020000
+
+Block creating times:
+Real time: 0.034094 || User time: 0.020000 || System time: 0.010000
+
+Block deleting times:
+Real time: 0.002185 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.004199 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.001698 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000110 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.022305 || User time: 0.010000 || System time: 0.020000
+
+Block creating times:
+Real time: 0.027983 || User time: 0.030000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.005168 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.808514 || User time: 0.410000 || System time: 0.400000
+
+Block creating times:
+Real time: 0.619708 || User time: 0.320000 || System time: 0.310000
+
+Block deleting times:
+Real time: 0.048135 || User time: 0.030000 || System time: 0.010000
+
+====================================
+Testing 1024 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.016835 || User time: 0.000000 || System time: 0.020000
+
+Block creating times:
+Real time: 0.011302 || User time: 0.010000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000534 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.089684 || User time: 0.030000 || System time: 0.060000
+
+Block creating times:
+Real time: 0.149663 || User time: 0.120000 || System time: 0.030000
+
+Block deleting times:
+Real time: 0.023007 || User time: 0.020000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 1.616391 || User time: 0.690000 || System time: 0.930000
+
+Block creating times:
+Real time: 2.734814 || User time: 1.650000 || System time: 1.080000
+
+Block deleting times:
+Real time: 0.196258 || User time: 0.140000 || System time: 0.060000
+\n====================================\n
+------------SHARED TESTS------------\n
+====================================\n
+
+====================================
+Testing 16 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.000389 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.000099 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000006 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.001680 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.002490 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000460 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.026655 || User time: 0.010000 || System time: 0.020000
+
+Block creating times:
+Real time: 0.035046 || User time: 0.020000 || System time: 0.020000
+
+Block deleting times:
+Real time: 0.002241 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.004346 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.001765 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000103 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.022765 || User time: 0.010000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.028889 || User time: 0.020000 || System time: 0.020000
+
+Block deleting times:
+Real time: 0.005534 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.406841 || User time: 0.210000 || System time: 0.200000
+
+Block creating times:
+Real time: 0.565436 || User time: 0.300000 || System time: 0.270000
+
+Block deleting times:
+Real time: 0.037804 || User time: 0.030000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.017186 || User time: 0.010000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.011780 || User time: 0.010000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000546 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.091922 || User time: 0.040000 || System time: 0.050000
+
+Block creating times:
+Real time: 0.119115 || User time: 0.100000 || System time: 0.020000
+
+Block deleting times:
+Real time: 0.024406 || User time: 0.020000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 1.715315 || User time: 0.850000 || System time: 0.870000
+
+Block creating times:
+Real time: 2.678921 || User time: 1.310000 || System time: 1.360000
+
+Block deleting times:
+Real time: 0.177472 || User time: 0.140000 || System time: 0.050000
+====================================
+------------STATIC TESTS------------
+====================================
+
+====================================
+Testing 16 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.000364 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.000097 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000006 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.001750 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.002294 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000388 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.024966 || User time: 0.020000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.033414 || User time: 0.020000 || System time: 0.010000
+
+Block deleting times:
+Real time: 0.002314 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.004199 || User time: 0.000000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.001656 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000107 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.022420 || User time: 0.010000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.030907 || User time: 0.030000 || System time: 0.010000
+
+Block deleting times:
+Real time: 0.005426 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.885626 || User time: 0.430000 || System time: 0.460000
+
+Block creating times:
+Real time: 1.068110 || User time: 0.520000 || System time: 0.550000
+
+Block deleting times:
+Real time: 0.038277 || User time: 0.040000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.017279 || User time: 0.000000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.011219 || User time: 0.010000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000535 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.092325 || User time: 0.040000 || System time: 0.060000
+
+Block creating times:
+Real time: 0.116576 || User time: 0.110000 || System time: 0.010000
+
+Block deleting times:
+Real time: 0.021785 || User time: 0.020000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 1.788563 || User time: 0.820000 || System time: 0.970000
+
+Block creating times:
+Real time: 3.940113 || User time: 2.050000 || System time: 1.890000
+
+Block deleting times:
+Real time: 0.194272 || User time: 0.150000 || System time: 0.050000
+====================================
+------------SHARED TESTS------------
+====================================
+
+====================================
+Testing 16 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.000498 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.000162 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000012 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.001878 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.002813 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000432 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.027154 || User time: 0.010000 || System time: 0.020000
+
+Block creating times:
+Real time: 0.036973 || User time: 0.020000 || System time: 0.010000
+
+Block deleting times:
+Real time: 0.002509 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.004574 || User time: 0.010000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.001820 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000156 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.023214 || User time: 0.010000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.029882 || User time: 0.020000 || System time: 0.010000
+
+Block deleting times:
+Real time: 0.006649 || User time: 0.010000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.425326 || User time: 0.220000 || System time: 0.210000
+
+Block creating times:
+Real time: 1.022462 || User time: 0.480000 || System time: 0.540000
+
+Block deleting times:
+Real time: 0.077817 || User time: 0.070000 || System time: 0.010000
+
+====================================
+Testing 1024 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.043148 || User time: 0.010000 || System time: 0.030000
+
+Block creating times:
+Real time: 0.012621 || User time: 0.020000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000693 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.096998 || User time: 0.030000 || System time: 0.060000
+
+Block creating times:
+Real time: 0.122313 || User time: 0.120000 || System time: 0.010000
+
+Block deleting times:
+Real time: 0.030940 || User time: 0.030000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 2.740450 || User time: 1.270000 || System time: 1.470000
+
+Block creating times:
+Real time: 2.347151 || User time: 1.190000 || System time: 1.150000
+
+Block deleting times:
+Real time: 0.180367 || User time: 0.140000 || System time: 0.040000
+====================================
+------------STATIC TESTS------------
+====================================
+
+====================================
+Testing 16 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.000389 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.000101 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000006 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.001657 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.002326 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000348 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.025841 || User time: 0.010000 || System time: 0.020000
+
+Block creating times:
+Real time: 0.033932 || User time: 0.020000 || System time: 0.010000
+
+Block deleting times:
+Real time: 0.002375 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.004205 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.001685 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000110 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.022560 || User time: 0.020000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.029875 || User time: 0.020000 || System time: 0.010000
+
+Block deleting times:
+Real time: 0.005574 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.406258 || User time: 0.210000 || System time: 0.200000
+
+Block creating times:
+Real time: 0.547018 || User time: 0.290000 || System time: 0.250000
+
+Block deleting times:
+Real time: 0.047709 || User time: 0.040000 || System time: 0.010000
+
+====================================
+Testing 1024 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.017021 || User time: 0.010000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.011624 || User time: 0.010000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000561 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.090136 || User time: 0.050000 || System time: 0.050000
+
+Block creating times:
+Real time: 0.142035 || User time: 0.120000 || System time: 0.010000
+
+Block deleting times:
+Real time: 0.022347 || User time: 0.020000 || System time: 0.010000
+
+====================================
+Testing 1024 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 2.093985 || User time: 1.100000 || System time: 0.990000
+
+Block creating times:
+Real time: 2.612175 || User time: 1.330000 || System time: 1.280000
+
+Block deleting times:
+Real time: 0.368086 || User time: 0.280000 || System time: 0.090000
+====================================
+------------SHARED TESTS------------
+====================================
+
+====================================
+Testing 16 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.000425 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.000110 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000008 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.001689 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.002589 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000425 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 16 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.029582 || User time: 0.010000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.037908 || User time: 0.020000 || System time: 0.020000
+
+Block deleting times:
+Real time: 0.002467 || User time: 0.000000 || System time: 0.010000
+
+====================================
+Testing 256 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.004341 || User time: 0.000000 || System time: 0.000000
+
+Block creating times:
+Real time: 0.001831 || User time: 0.000000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000144 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.029633 || User time: 0.010000 || System time: 0.020000
+
+Block creating times:
+Real time: 0.104283 || User time: 0.060000 || System time: 0.040000
+
+Block deleting times:
+Real time: 0.010344 || User time: 0.010000 || System time: 0.000000
+
+====================================
+Testing 256 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 0.782231 || User time: 0.410000 || System time: 0.380000
+
+Block creating times:
+Real time: 0.548059 || User time: 0.290000 || System time: 0.260000
+
+Block deleting times:
+Real time: 0.045764 || User time: 0.030000 || System time: 0.010000
+
+====================================
+Testing 1024 pairs of max length 16...
+====================================
+
+Merging times:
+Real time: 0.017231 || User time: 0.010000 || System time: 0.010000
+
+Block creating times:
+Real time: 0.011650 || User time: 0.010000 || System time: 0.000000
+
+Block deleting times:
+Real time: 0.000550 || User time: 0.000000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 256...
+====================================
+
+Merging times:
+Real time: 0.096444 || User time: 0.050000 || System time: 0.050000
+
+Block creating times:
+Real time: 0.122659 || User time: 0.100000 || System time: 0.020000
+
+Block deleting times:
+Real time: 0.023707 || User time: 0.030000 || System time: 0.000000
+
+====================================
+Testing 1024 pairs of max length 1024...
+====================================
+
+Merging times:
+Real time: 2.138141 || User time: 1.120000 || System time: 1.020000
+
+Block creating times:
+Real time: 2.186286 || User time: 1.230000 || System time: 0.950000
+
+Block deleting times:
+Real time: 0.187410 || User time: 0.130000 || System time: 0.050000
