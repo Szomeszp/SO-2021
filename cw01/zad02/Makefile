@@ -1,13 +1,13 @@
 CC = gcc
-CC_FLAGS = -Wall -std=c11
+FLAGS = -Wall -std=c11
 RAPORT2 = raport2.txt
 
 static:
-	$(CC) $(CC_FLAGS) -c merge.c -o libmerge.o
+	$(CC) $(FLAGS) -c merge.c -o libmerge.o
 	ar rcs libmerge.a libmerge.o
 
 shared:
-	$(CC) $(CC_FLAGS) -fPIC -shared merge.c -o libmerge.so
+	$(CC) $(FLAGS) -fPIC -shared merge.c -o libmerge.so
 
 clean:
 	rm -f *.o
@@ -15,10 +15,10 @@ clean:
 	rm -f *.so
 
 staticMain: clean static
-	$(CC) $(CC_FLAGS) main.c -static -L. -lmerge -o output
+	$(CC) $(FLAGS) main.c -static -L. -lmerge -o output
 
 sharedMain: clean shared
-	$(CC) $(CC_FLAGS) main.c -lmerge -L. -Wl,-rpath=. -o output
+	$(CC) $(FLAGS) main.c -lmerge -L. -Wl,-rpath=. -o output
 
 runTest:
 	./output test >> $(RAPORT2)
