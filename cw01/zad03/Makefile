@@ -21,8 +21,8 @@ staticMain: clean static
 sharedMain: clean shared
 	$(CC) $(FLAGS) main.c -lmerge -L. -Wl,-rpath=. -o output
 
-dynamicMain: clean shared
-	$(CC) $(FLAGS) main.c -ldl -DDYNAMIC -o output
+dynamicMain:
+	$(CC) $(FLAGS) mainDynamic.c -ldl -o output
 
 runTestA:
 	./output test >> $(RAPORT3A)
@@ -71,7 +71,8 @@ raportB:
 	make runTestB
 
 	make clean
-	$(CC) -O0 -Wall -std=c11 main.c -ldl -o output
+	make shared
+	$(CC) -O0 -Wall -std=c11 mainDynamic.c -ldl -o output
 	@echo "====================================" >> $(RAPORT3B)
 	@echo "------------DYNAMIC TESTS------------" >> $(RAPORT3B)
 	@echo "====================================" >> $(RAPORT3B)
@@ -98,7 +99,8 @@ raportB:
 	make runTestB
 
 	make clean
-	$(CC) -O2 -Wall -std=c11 main.c -ldl -o output
+	make shared
+	$(CC) -O2 -Wall -std=c11 mainDynamic.c -ldl -o output
 	@echo "====================================" >> $(RAPORT3B)
 	@echo "------------DYNAMIC TESTS------------" >> $(RAPORT3B)
 	@echo "====================================" >> $(RAPORT3B)
@@ -125,7 +127,8 @@ raportB:
 	make runTestB
 
 	make clean
-	$(CC) -O3 -Wall -std=c11 main.c -ldl -o output
+	make shared
+	$(CC) -O3 -Wall -std=c11 mainDynamic.c -ldl -o output
 	@echo "====================================" >> $(RAPORT3B)
 	@echo "------------DYNAMIC TESTS------------" >> $(RAPORT3B)
 	@echo "====================================" >> $(RAPORT3B)
@@ -152,7 +155,8 @@ raportB:
 	make runTestB
 
 	make clean
-	$(CC) -Ofast -Wall -std=c11 main.c -ldl -o output
+	make shared
+	$(CC) -Ofast -Wall -std=c11 mainDynamic.c -ldl -o output
 	@echo "====================================" >> $(RAPORT3B)
 	@echo "------------DYNAMIC TESTS------------" >> $(RAPORT3B)
 	@echo "====================================" >> $(RAPORT3B)
