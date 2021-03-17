@@ -85,6 +85,49 @@ void createRowsBlock(mainArray_t *mainArray, FILE *mergedFile){
 
 }
 
+int numberOfRows(mainArray_t* mainArray, size_t blockIndex){
+    if(mainArray->rowsBlocks[blockIndex]){ //Tutaj chyba nie ma nulla, nie wiem jak sprawdzić
+        return mainArray->rowsBlocks[blockIndex]->size;
+    }
+    else{
+        return -1;
+    }
+
+}
+
+void removeRow(mainArray_t* mainArray, size_t blockIndex, size_t row){
+    if(mainArray->rowsBlocks[blockIndex]){
+        if(mainArray->rowsBlocks[blockIndex]->rows[row]){
+            free(mainArray->rowsBlocks[blockIndex]->rows[row]); //Nie wiem czy tak można
+            while(row < mainArray->rowsBlocks[blockIndex]->size - 1){
+                mainArray->rowsBlocks[blockIndex]->rows[row] = mainArray->rowsBlocks[blockIndex]->rows[row + 1];
+                row = row + 1;
+            }
+        mainArray->rowsBlocks[blockIndex]->size = mainArray->rowsBlocks[blockIndex]->size - 1;
+        }
+        else{
+            //TODO: ERROR
+        }
+    }
+    else{
+        //TODO: ERROR
+    }
+}
+
+void removeBlock(mainArray_t* mainArray, size_t blockindex){
+    if(mainArray->rowsBlocks[blockindex]){
+
+
+    }
+    else{
+        //TODO: ERROR
+    }
+
+
+
+}
+
+
 
 int main() {
     mainArray_t* m = createMainTable(2);
