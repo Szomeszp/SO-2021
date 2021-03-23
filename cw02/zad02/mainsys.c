@@ -7,55 +7,31 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+#define MAX_LINE_SIZE 256
 
 int main(int argc, char **argv){
     if(argc >= 4){
-        printf("Too many arguments!");
+        printf("Too many arguments!\n");
         return -1;
     }
 
-    char *pathOne = NULL;
-    char *pathTwo = NULL;
-
-    int fileOne = -1;
-    int fileTwo = -1;
+    int file = -1;
 
     if(argc == 1){
-        printf("Path to first file: \n");
-        scanf("%ms", &pathOne);
-
-        printf("Path to second file: \n");
-        scanf("%ms", &pathTwo);
-
-        fileOne = open(pathOne, O_RDONLY);
-        fileTwo = open(pathTwo, O_RDONLY);
-
-        free(pathOne);
-        free(pathTwo);
+        printf("No arguments given!\n");
+        printf("You have to specify character and path to file!\n");
+        return -1;
     }
     else if(argc == 2){
-        printf("Path to second file: \n");
-        scanf("%ms", &pathTwo);
-
-        fileOne = open(argv[1], O_RDONLY);
-        fileTwo = open(pathTwo, O_RDONLY);
-        
-        free(pathTwo);
+        printf("Path to file was not specified!\n");
+        return -1;
     }
     else{
-        fileOne = open(argv[1], O_RDONLY);
-        fileTwo = open(argv[2], O_RDONLY);
+        file = open(argv[2], O_RDONLY);
     }
 
-    if(fileOne == -1 || fileTwo == -1){
+    if(file == -1){
         printf("Error while opening files!\n");
-        
-        if(fileOne){
-            close(fileOne);
-        }
-        if(fileTwo){
-            close(fileTwo);
-        }
         return -1;
     }
 
@@ -65,26 +41,34 @@ int main(int argc, char **argv){
     times(&start);
 
     char buf;
+    char line[MAX_LINE_SIZE];
     int count;
+    int occured;
 
     while (1){
         count = 0;
+        occured = 0;
 
-        while (read(fileOne, &buf, sizeof(char)) == 1){
+        while (read(file, &buf, sizeof(char)) == 1 && count < MAX_LINE_SIZE - 2){
+            line[count] = buf;
             count = count + 1;
-            write(STDOUT_FILENO, &buf, sizeof(char));
+            if(buf == argv[1][0]){
+                occured = 1;
+            }
             if(buf == '\n'){
                 break;
             }
         }
 
-        while (read(fileTwo, &buf, sizeof(char)) == 1){
-            count = count + 1;
-            write(STDOUT_FILENO, &buf, sizeof(char));
-            if(buf == '\n'){
-                break;
-            }
+        if(count >= MAX_LINE_SIZE - 2){
+            printf("Lines must not have more than 256 characters!\n");
+            return -1;
         }
+
+        if(occured){
+            write(STDOUT_FILENO, &line, count * sizeof(char));
+        }
+
         if (!count){
             break;
         }
@@ -95,8 +79,7 @@ int main(int argc, char **argv){
 
     printf("TIME: %f\n", (double)(end.tms_stime - start.tms_stime)/sysconf(_SC_CLK_TCK));
 
-    close(fileOne);
-    close(fileTwo);
+    close(file);
 
     return 0;
 }
