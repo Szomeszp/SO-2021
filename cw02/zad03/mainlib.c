@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <sys/times.h>
 #include <unistd.h>
-
+#include <math.h>
+#include <string.h>
 
 int main(int argc, char **argv){
     FILE *dataFile = fopen("dane.txt", "r");
@@ -37,39 +38,60 @@ int main(int argc, char **argv){
 
     times(&start);
 
-    char line[21];
+    char line[256];
+    char buf;
+    int evenCounter = 0;
+    unsigned long long number;
     int count;
-    int flag;
+ 
+    while(1){
+        count = 0;
+        number = 0;
 
-    while (1){
-        flag = 0;
-
-        while (fread(&buf, sizeof(char), 1, file) == 1){
+        while (fread(&buf, sizeof(char), 1, dataFile) == 1){
             line[count] = buf;
             count = count + 1;
-            if(buf == argv[1][0]){
-                occured = 1;
-            }
             if(buf == '\n'){
+                line[count] = '\0';
                 break;
             }
         }
 
-        if(count >= MAX_LINE_SIZE - 2){
-            printf("Lines must not have more than 256 characters!\n");
+        if(count >= 21){
+            printf("Numbers are too long!\n");
+            fclose(dataFile);
+            fclose(evenFile);
+            fclose(tensFile);
+            fclose(sqrtFile);
             return -1;
-        }
-
-        if(occured){
-            fwrite(&line, sizeof(char), count, stdout);
         }
 
         if (!count){
             break;
         }
+
+        if(count > 0){
+            sscanf(line, "%llu", &number);
+        }
+
+        if(number % 2 == 0){
+            evenCounter = evenCounter + 1;
+        }
+
+        if((number > 9) && ((number / 10) % 10 == 0 || (number / 10) % 10 == 7)){
+            fwrite(line, sizeof(char), count, tensFile);
+        }
+
+        if((unsigned long long)sqrt(number) * (unsigned long long)sqrt(number) == number){
+            fwrite(line, sizeof(char), count, sqrtFile);
+        }
     }
 
-    
+    char *txt = "Liczb parzystych jest ";
+    sprintf(line, "%d", evenCounter);
+    fwrite(txt, sizeof(char), strlen(txt), evenFile);
+    fwrite(line, sizeof(char), strlen(line), evenFile);
+
     times(&end);
 
     printf("TIME: %f\n", (double)(end.tms_stime - start.tms_stime)/sysconf(_SC_CLK_TCK));
