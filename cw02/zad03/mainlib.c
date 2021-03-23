@@ -6,53 +6,29 @@
 
 
 int main(int argc, char **argv){
-    if(argc >= 4){
-        printf("Too many arguments!");
+    FILE *dataFile = fopen("dane.txt", "r");
+
+    if(dataFile == NULL){
+        printf("Can not open data file!\n");
         return -1;
     }
 
-    char *pathOne = NULL;
-    char *pathTwo = NULL;
-
-    FILE *fileOne = NULL;
-    FILE *fileTwo = NULL;
-
-    if(argc == 1){
-        printf("Path to first file: \n");
-        scanf("%ms", &pathOne);
-
-        printf("Path to second file: \n");
-        scanf("%ms", &pathTwo);
-
-        fileOne = fopen(pathOne, "r");
-        fileTwo = fopen(pathTwo, "r");
-
-        free(pathOne);
-        free(pathTwo);
-    }
-    else if(argc == 2){
-        printf("Path to second file: \n");
-        scanf("%ms", &pathTwo);
-
-        fileOne = fopen(argv[1], "r");
-        fileTwo = fopen(pathTwo, "r");
-        
-        free(pathTwo);
-    }
-    else{
-        fileOne = fopen(argv[1], "r");
-        fileTwo = fopen(argv[2], "r");
-    }
-
-    if(fileOne == NULL || fileTwo == NULL){
-        printf("Error while opening files!\n");
-
-        if(fileOne){
-            fclose(fileOne);
+    FILE *evenFile = fopen("a.txt", "w");
+    FILE *tensFile = fopen("b.txt", "w");
+    FILE *sqrtFile = fopen("c.txt", "w");
+    
+    if(evenFile == NULL || tensFile == NULL || sqrtFile == NULL){
+        printf("Can not create file!\n");
+        if(evenFile){
+            fclose(evenFile);
         }
-        if(fileTwo){
-            fclose(fileTwo);
+        if(tensFile){
+            fclose(tensFile);
         }
+        if(sqrtFile){
+            fclose(sqrtFile);
+        }
+        fclose(dataFile);
         return -1;
     }
 
@@ -61,27 +37,33 @@ int main(int argc, char **argv){
 
     times(&start);
 
-    char buf;
+    char line[21];
     int count;
+    int flag;
 
     while (1){
-        count = 0;
+        flag = 0;
 
-        while (fread(&buf, sizeof(char), 1, fileOne) == 1){
+        while (fread(&buf, sizeof(char), 1, file) == 1){
+            line[count] = buf;
             count = count + 1;
-            fwrite(&buf, sizeof(char), 1, stdout);
+            if(buf == argv[1][0]){
+                occured = 1;
+            }
             if(buf == '\n'){
                 break;
             }
         }
 
-        while (fread(&buf, sizeof(char), 1, fileTwo) == 1){
-            count = count + 1;
-            fwrite(&buf, sizeof(char), 1, stdout);
-            if(buf == '\n'){
-                break;
-            }
+        if(count >= MAX_LINE_SIZE - 2){
+            printf("Lines must not have more than 256 characters!\n");
+            return -1;
         }
+
+        if(occured){
+            fwrite(&line, sizeof(char), count, stdout);
+        }
+
         if (!count){
             break;
         }
@@ -92,8 +74,10 @@ int main(int argc, char **argv){
 
     printf("TIME: %f\n", (double)(end.tms_stime - start.tms_stime)/sysconf(_SC_CLK_TCK));
 
-    fclose(fileOne);
-    fclose(fileTwo);
+    fclose(dataFile);
+    fclose(evenFile);
+    fclose(tensFile);
+    fclose(sqrtFile);
 
     return 0;
 }
